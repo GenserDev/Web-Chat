@@ -1,28 +1,46 @@
 // Creación de etiquetas padres HTML
-const header = document.createElement("header");
-document.body.appendChild(header);
+const body_structure = document.createElement("div");
+document.body.appendChild(body_structure);
 
 // Inserción de contenido a las etiquetas padres
-function headerHTML(header) {
-    header.innerHTML = 
+function bodyHTML(body_structure) {
+    body_structure.innerHTML = 
     `
-        <nav> 
-            <a href="https://github.com/GenserDev/Web-Chat" target="_blank"> 
-                <img src="Assets/github-logo.png" alt="Github">
-            </a>
-            <a href="https://genserdev.space">
-                <img src="Assets/genderdev-logo.png" alt="Genserdev">
-            </a>
-        </nav>
+    <div>
+        <header>
+            <nav> 
+                <a href="https://github.com/GenserDev/Web-Chat" target="_blank"> 
+                    <img src="Assets/github-logo.png" alt="Github">
+                </a>
+                <a href="https://genserdev.space">
+                    <img src="Assets/genderdev-logo.png" alt="Genserdev">
+                </a>
+            </nav>
+        </header>
+    </div>        
     `;
 }
 
-document.body.style.margin = "0";
-// Estilos de las etiquetas - Centrar el contenido dentro del header
-header.style.display = "flex"; 
-header.style.justifyContent = "center"; 
-header.style.alignItems = "center"; 
-header.style.backgroundColor = "black";
+const estilo = document.createElement("style");
+estilo.innerHTML = `
+
+    body{
+        margin: 0;}
+    header img {
+        width: 50px;
+        height: auto;
+    }
+
+    header {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+
+    }
+`;
+document.head.appendChild(estilo);
+
 
 // Compilador de las etiquetas
-headerHTML(header);
+bodyHTML(body_structure)
