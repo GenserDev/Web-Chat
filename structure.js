@@ -214,9 +214,8 @@ estilo.innerHTML = `
     .char-counter {
         align-self: flex-end;
         font-size: 12px;
-        color: #666;
-        margin-right: 5px;
-        margin-bottom: 2px;
+        color: white;
+        margin: 10px;
     }
 
     /* front screen */
